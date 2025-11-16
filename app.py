@@ -11,6 +11,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+openai_api_key = os.getenv("OPENAI_API_KEY", "")
+openrouter_llm = ChatOpenAI(
+    openai_api_key=openai_api_key,
+    model="gpt-3.5-turbo",
+)
 
 class ZipOutput(BaseModel):
     zip_code: str = Field(description="Extracted ZIP code or NONE")
@@ -21,11 +26,6 @@ class ChatState(TypedDict):
     zip_code: str | None
     attempts: int
 
-openai_api_key = os.getenv("OPENAI_API_KEY", "")
-openrouter_llm = ChatOpenAI(
-    openai_api_key=openai_api_key,
-    model="gpt-3.5-turbo",
-)
 
 async def extract_zip_llm(state: ChatState):
     print("DEBUG: extract_zip_llm invoked with state:", state)
