@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: "Run AccuKnox SAST: Opengrep"
-        uses: accuknox/sast-scan-opengrep-action@v1.0.1
+        uses: ./.github/actions/accuknox-opengrep
         with:
           accuknox_endpoint: "${{ secrets.ACCUKNOX_ENDPOINT }}"
           accuknox_token: "${{ secrets.ACCUKNOX_TOKEN }}"
