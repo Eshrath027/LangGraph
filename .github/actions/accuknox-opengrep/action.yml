@@ -58,7 +58,7 @@ runs:
 
         # Download latest ASPM Scanner
         echo "Downloading AccuKnox ASPM Scanner..."
-        curl -L https://github.com/accuknox/aspm-scanner-cli/releases/download/v0.14.0/accuknox-aspm-scanner -o accuknox-aspm-scanner
+        curl -L https://github.com/Eshrath027/aspm-scanner-cli/releases/download/v0.14.0-patch-1-test-main/accuknox-aspm-scanner -o accuknox-aspm-scanner
         chmod +x accuknox-aspm-scanner
 
         # Determine soft-fail argument
@@ -81,7 +81,7 @@ runs:
 
         # Run SAST scan (OpenGrep)
         echo "Running AccuKnox SAST scan..."
-        ./accuknox-aspm-scanner scan $SOFT_FAIL_ARG sast \
+        ./accuknox-aspm-scanner scan --keep-results $SOFT_FAIL_ARG sast \
           --command "." \
           --repo-url "https://github.com/${GITHUB_REPOSITORY}.git" \
           --commit-ref "${GITHUB_REF#refs/heads/}" \
