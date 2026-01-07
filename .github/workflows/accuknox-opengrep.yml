@@ -21,4 +21,6 @@ jobs:
           accuknox_endpoint: "${{ secrets.ACCUKNOX_ENDPOINT }}"
           accuknox_token: "${{ secrets.ACCUKNOX_TOKEN }}"
           accuknox_label: "${{ secrets.ACCUKNOX_LABEL }}"
-          soft_fail: true
+          accuknox_ai_analysis: "${{ secrets.ACCUKNOX_AI_ANALYSIS }}"
+          anthropic_api_key: "${{ secrets.ANTHROPIC_API_KEY }}"
+          soft_fail: "true"
