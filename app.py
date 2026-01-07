@@ -143,7 +143,7 @@ workflow = graph.compile()
 async def run_chat():
     state = {"messages": [], "zip_code": None, "attempts": 0}
     
-    print("BOT: Please provide your 5-digit ZIP code.")
+    print("BOT: Please provide your 5-digit ZIP code")
     
     while state["attempts"] < 5 and not state["zip_code"]:
         user_msg = input("YOU: ")
