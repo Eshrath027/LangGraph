@@ -78,7 +78,7 @@ async def extract_zip_llm(state: ChatState):
                 if word.isdigit() and len(word) == 5:
                     extracted_zip = word
                 else:
-                    parsed = ZipOutput(zip_code="NONE", reply="I couldn't find a valid ZIP code. Could you please provide it again?")
+                    parsed = ZipOutput(zip_code="NONE", reply="I couldn't find a valid ZIP code. Could you please provide it again? ")
                     extracted_zip = parsed.zip_code
 
     if extracted_zip != "NONE":
