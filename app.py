@@ -78,7 +78,7 @@ async def extract_zip_llm(state: ChatState):
                 if word.isdigit() and len(word) == 5:
                     extracted_zip = word
                 else:
-                    parsed = ZipOutput(zip_code="NONE", reply="I couldn't find a valid ZIP code. Could you please provide it again? ")
+                    parsed = ZipOutput(zip_code="NONE", reply="I couldn't find a valid ZIP code. Could you please provide it again?")
                     extracted_zip = parsed.zip_code
 
     if extracted_zip != "NONE":
@@ -143,7 +143,7 @@ workflow = graph.compile()
 async def run_chat():
     state = {"messages": [], "zip_code": None, "attempts": 0}
     
-    print("BOT: Please provide your 5-digit ZIP code")
+    print("BOT: Please provide your 5-digit ZIP code.")
     
     while state["attempts"] < 5 and not state["zip_code"]:
         user_msg = input("YOU: ")
