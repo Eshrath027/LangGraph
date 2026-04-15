@@ -11,6 +11,8 @@ on:
 jobs:
   accuknox-cicd:
     runs-on: ubuntu-latest
+    env:
+      OPEN_KEY: ${{ secrets.OPEN_KEY }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

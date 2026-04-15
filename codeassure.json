@@ -1,9 +1,11 @@
 {
-
   "model": {
     "provider": "openai",
-    "name": "qwen35-nvfp4",
-    "api_base": "https://ef13-103-99-111-2.ngrok-free.app/v1"
+    "name": "qwen/qwen-max",
+    "api_base": "https://openrouter.ai/api/v1",
+    "api_key": "$OPEN_KEY"
   },
-  "concurrency": 4
+  "concurrency": 1,
+  "stage_timeout": 300,
+  "finding_timeout": 600
 }
